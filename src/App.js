@@ -48,7 +48,7 @@ function App() {
     <div>
       <nav className="navbar">
         <a href="#home" className="nav-logo">
-          <span style={{ fontSize: '1.8rem' }}>⚕️</span> Physio India
+          <span style={{ fontSize: '1.8rem' }}>⚕️</span>The Physio India
         </a>
         
         {/* NEW: Hamburger Icon */}
@@ -191,7 +191,7 @@ function App() {
 <section id="collaborate" className="collab-section">
   <h2 className="section-title">Partner With Us</h2>
   <p className="collab-intro">
-    Physio India is actively expanding its network. We seek passionate practitioners and modern clinics to join our mission.
+    The physio india is actively expanding its network. We seek passionate practitioners and modern clinics to join our mission.
   </p>
 
   <div className="criteria-grid">
@@ -224,14 +224,14 @@ function App() {
   </div>
 
   <div className="collab-cta">
-    <a href="mailto:partners@physioindia.in" className="btn-secondary">Apply for Partnership</a>
+    <a href="mailto:partners@thephysioindia.in" className="btn-secondary">Apply for Partnership</a>
   </div>
 </section>
 
       {/* Footer */}
       <footer className="footer animate-fade-in">
-        <p>&copy; 2026 Physio India. All rights reserved.</p>
-        <p>contact@physioindia.in | +91 98765 43210</p>
+        <p> contact@thephysioindia.in | &#128222; +91 98765 43210 </p>
+        <p>&copy; 2026 The Physio India. All rights reserved.</p>
       </footer>
 
       {/* MODAL POPUP (Unchanged) */}

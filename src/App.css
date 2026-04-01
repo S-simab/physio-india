@@ -203,7 +203,7 @@ body {
 
 /* --- SECTIONS GENERAL --- */
 section {
-  padding: 100px 5%;
+  padding: 60px 5%;
 }
 
 .section-title {
@@ -568,15 +568,15 @@ section {
 
 /* --- FOOTER --- */
 .footer {
-  background-color: #11191f;
-  color: #95a5a6;
+  background-color: #ad698a;
+  color: #111212;
   text-align: center;
-  padding: 50px 5%;
+  padding: 15px 5%;
 }
 
 .footer p {
   margin-bottom: 10px;
-  font-size: 0.95rem;
+  font-size: 0.90rem;
 }
 
 /* --- MODAL --- */
