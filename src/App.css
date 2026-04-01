@@ -72,40 +72,37 @@ body {
   gap: 10px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
 
-.nav-links li a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s;
-  position: relative;
-  padding-bottom: 5px;
-}
 
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #0056b3;
-  transition: width 0.3s;
-}
 
-.nav-links li a:hover {
-  color: #0056b3;
-}
+
 
 .nav-links li a:hover::after {
   width: 100%;
 }
+
+
+
+ 
+  /* Jab menu open hoga */
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    font-size: 1.4rem; /* Mobile par thoda bada aur clear text */
+    font-weight: 700;
+    display: block;
+    padding: 15px;
+    color: #1a252f;
+  }
+
 
 /* --- HERO SECTION with ANIMATED BACKGROUND --- */
 .hero-container {
@@ -674,4 +671,92 @@ section {
   .form-group.full-width, .submit-btn { grid-column: span 1; }
   section { padding: 60px 20px; }
   .booking-container { padding: 30px; }
+}
+
+/* =========================================
+   1. DESKTOP NAVBAR (Badi screen par links dikhane ke liye)
+   ========================================= */
+.nav-links {
+  list-style: none;
+  display: flex; /* Ye links ko ek line me layega */
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0056b3;
+}
+
+/* =========================================
+   2. HAMBURGER ICON (Desktop par hide rahega)
+   ========================================= */
+.menu-icon {
+  display: none; /* Badi screen pe gayab */
+  font-size: 2rem;
+  cursor: pointer;
+  color: #0056b3;
+  user-select: none;
+  z-index: 2000;
+}
+
+/* =========================================
+   3. MOBILE RESPONSIVENESS (Sirf choti screen ke liye)
+   ========================================= */
+@media (max-width: 992px) {
+  .navbar { padding: 15px 20px; }
+  .nav-links { gap: 15px; }
+}
+
+@media (max-width: 768px) {
+  /* Mobile pe icon dikhega */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 15px;
+  }
+
+  /* Mobile pe links chhup jayenge (Hamburger menu ban jayenge) */
+  .nav-links {
+    position: fixed;
+    top: 65px; 
+    left: -100%; /* Screen ke bahar */
+    width: 100%;
+    height: 100vh;
+    background-color: #bbe8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  /* Jab menu open hoga */
+  .nav-links.active {
+    left: 0; /* Screen ke andar aayega */
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: block;
+    padding: 15px;
+    color: #1a252f;
+  }
 }

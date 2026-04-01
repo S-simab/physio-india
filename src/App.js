@@ -27,6 +27,9 @@ function App() {
   const [formData, setFormData] = useState({ patientName: '', doctorId: '', therapy: '', date: '', time: '' });
   const [bookingStatus, setBookingStatus] = useState(null);
   const [selectedTherapy, setSelectedTherapy] = useState(null);
+  // Har state ke sath isko bhi add karein
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -47,11 +50,18 @@ function App() {
         <a href="#home" className="nav-logo">
           <span style={{ fontSize: '1.8rem' }}>⚕️</span> Physio India
         </a>
-        <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#clinic">Clinic</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#collaborate">Partner</a></li>
+        
+        {/* NEW: Hamburger Icon */}
+        <div className="menu-icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? '✖' : '☰'}
+        </div>
+
+        {/* UPDATED: Links ke sath active class aur click karne par menu close hone ka logic */}
+        <ul className={isMobileMenuOpen ? "nav-links active" : "nav-links"}>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a></li>
+          <li><a href="#clinic" onClick={() => setIsMobileMenuOpen(false)}>Clinic</a></li>
+          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
+          <li><a href="#collaborate" onClick={() => setIsMobileMenuOpen(false)}>Partner</a></li>
         </ul>
       </nav>
 
