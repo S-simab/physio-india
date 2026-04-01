@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/physio-india/static/css/main.96e1424c.css",
-    "main.js": "/physio-india/static/js/main.2fd06109.js",
+    "main.css": "/physio-india/static/css/main.531f3fe8.css",
+    "main.js": "/physio-india/static/js/main.1d50ef26.js",
     "static/js/453.7968eec6.chunk.js": "/physio-india/static/js/453.7968eec6.chunk.js",
     "index.html": "/physio-india/index.html",
-    "main.96e1424c.css.map": "/physio-india/static/css/main.96e1424c.css.map",
-    "main.2fd06109.js.map": "/physio-india/static/js/main.2fd06109.js.map",
+    "main.531f3fe8.css.map": "/physio-india/static/css/main.531f3fe8.css.map",
+    "main.1d50ef26.js.map": "/physio-india/static/js/main.1d50ef26.js.map",
     "453.7968eec6.chunk.js.map": "/physio-india/static/js/453.7968eec6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96e1424c.css",
-    "static/js/main.2fd06109.js"
+    "static/css/main.531f3fe8.css",
+    "static/js/main.1d50ef26.js"
   ]
 }
