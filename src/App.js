@@ -230,8 +230,8 @@ function App() {
 
       {/* Footer */}
       <footer className="footer animate-fade-in">
-        <p> <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }}></i> contact@thephysioindia.in </p>
-        <p> <i className="fa-solid fa-phone" style={{ marginLeft: '15px', marginRight: '8px' }}></i> +91 98765 43210 </p>
+        <p> <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }}></i> contact@thephysioindia.in |
+        <i className="fa-solid fa-phone" style={{ marginLeft: '15px', marginRight: '8px' }}></i> +91 98765 43210 </p>
         <p>&copy; 2026 The Physio India. All rights reserved.</p>
       </footer>
 
