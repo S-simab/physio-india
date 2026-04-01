@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/physio-india/static/css/main.3a30da87.css",
+    "main.js": "/physio-india/static/js/main.16fe864a.js",
+    "static/js/453.7968eec6.chunk.js": "/physio-india/static/js/453.7968eec6.chunk.js",
+    "index.html": "/physio-india/index.html",
+    "main.3a30da87.css.map": "/physio-india/static/css/main.3a30da87.css.map",
+    "main.16fe864a.js.map": "/physio-india/static/js/main.16fe864a.js.map",
+    "453.7968eec6.chunk.js.map": "/physio-india/static/js/453.7968eec6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a30da87.css",
+    "static/js/main.16fe864a.js"
+  ]
+}
