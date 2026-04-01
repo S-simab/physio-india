@@ -77,13 +77,13 @@ function App() {
 
       {/* About Us Section */}
       <section id="about" className="about-section">
-        <h2 className="section-title animate-pop-in">About Physio India</h2>
+        <h2 className="section-title animate-pop-in">About The Physio India</h2>
         <p className="section-subtitle animate-pop-in">Your trusted partner in holistic recovery and well-being.</p>
         
         <div className="about-content">
           <div className="about-text animate-pop-in delay-1">
             <p>
-              At <strong>Physio India</strong>, we provide world-class rehabilitation services. Founded on advanced medical science and compassionate care, our clinic is a leader in holistic recovery.
+              At <strong>The Physio India</strong>, we provide world-class rehabilitation services. Founded on advanced medical science and compassionate care, our clinic is a leader in holistic recovery.
             </p>
             <p>
               Our internationally trained specialists use evidence-based practices and state-of-the-art equipment to create personalized treatment plans, ensuring you don't just recover—you thrive.
