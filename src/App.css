@@ -49,10 +49,11 @@ body {
 
 /* --- NAVIGATION --- */
 .navbar {
+  height: 75px;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(159 234 194 / 95%);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: space-between;
@@ -494,6 +495,14 @@ section {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
+  animation: fadeIn 0.5s;
+}
+
+/* --- WARNING STATUS ALERT (New) --- */
+.status-warning {
+  background-color: #fff3cd; /* Professional light yellow */
+  color: #856404; /* Dark golden brown text */
+  border: 1px solid #ffeeba;
   animation: fadeIn 0.5s;
 }
 

@@ -30,17 +30,29 @@ function App() {
   // Har state ke sath isko bhi add karein
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
+  
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setBookingStatus({ type: 'success', message: `Appointment Confirmed! Thank you, ${formData.patientName}. We will see you on ${formData.date} at ${formData.time}.` });
-    setFormData({ patientName: '', doctorId: '', therapy: '', date: '', time: '' });
-    setTimeout(() => setBookingStatus(null), 6000);
+  // --- PROFESSIONAL UNAVAILABLE ALERT LOGIC ---
+  const showUnavailableAlert = () => {
+    setBookingStatus({ 
+      type: 'warning', 
+      message: '⚠️ Online booking is temporarily unavailable due to system upgrades. Please call us at +91 98765 43210 to schedule your session.' 
+    });
+    
+    // Message ko 6 second baad hide karne ke liye
+    setTimeout(() => {
+      setBookingStatus(null);
+    }, 6000);
   };
 
-  const handleOverlayClick = (e) => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Page refresh hone se rokega
+    showUnavailableAlert(); // Submit karne par bhi alert dikhayega
+  };
+
+  const handleOverlayClick = (e) => {      
     if (e.target.className === 'modal-overlay') setSelectedTherapy(null);
   };
 
@@ -155,7 +167,9 @@ function App() {
           {bookingStatus && (
             <div className={`status-alert status-${bookingStatus.type}`}>{bookingStatus.message}</div>
           )}
-          <form onSubmit={handleSubmit} className="form-grid">
+          <form onSubmit={handleSubmit} onClickCapture={showUnavailableAlert} 
+            onFocusCapture={showUnavailableAlert}
+           className="form-grid">
             <div className="form-group full-width">
               <label>Patient Full Name</label>
               <input type="text" name="patientName" value={formData.patientName} onChange={handleChange} required placeholder="e.g. Rahul Kumar" />
