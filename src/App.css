@@ -482,28 +482,39 @@ section {
   box-shadow: 0 7px 20px rgba(0, 86, 179, 0.4);
 }
 
-/* --- STATUS ALERT --- */
+/* --- STATUS ALERT (TOAST NOTIFICATION) --- */
 .status-alert {
-  padding: 18px;
-  border-radius: 8px;
-  margin-bottom: 25px;
+  position: fixed; /* Ye line alert ko screen par lock kar degi */
+  top: 20px; /* Screen mein sabse upar se thoda niche */
+  left: 50%; /* Center karne ke liye */
+  transform: translateX(-50%); /* Bilkul perfect center me layega */
+  width: 90%; /* Mobile par achha dikhne ke liye */
+  max-width: 450px;
+  padding: 15px 20px;
+  border-radius: 10px;
   text-align: center;
   font-weight: 700;
+  z-index: 9999; /* Ye ensure karega ki alert sabse upar (navbar ke bhi upar) dikhe */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+  animation: slideDownAlert 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; /* Bouncy drop animation */
 }
 
 .status-success {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
-  animation: fadeIn 0.5s;
 }
 
-/* --- WARNING STATUS ALERT (New) --- */
 .status-warning {
-  background-color: #fff3cd; /* Professional light yellow */
-  color: #856404; /* Dark golden brown text */
+  background-color: #fff3cd;
+  color: #856404;
   border: 1px solid #ffeeba;
-  animation: fadeIn 0.5s;
+}
+
+/* Naya Drop-down Bouncy Animation */
+@keyframes slideDownAlert {
+  0% { top: -100px; opacity: 0; }
+  100% { top: 20px; opacity: 1; }
 }
 
 /* --- COLLABORATION SECTION --- */
