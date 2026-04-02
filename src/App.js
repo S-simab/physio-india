@@ -58,6 +58,9 @@ function App() {
 
   return (
     <div>
+       {bookingStatus && (
+                  <div className={`status-alert status-${bookingStatus.type}`}>{bookingStatus.message}</div>
+                )}
       <nav className="navbar">
         <a href="#home" className="nav-logo">
           <span style={{ fontSize: '1.8rem' }}>⚕️</span>The Physio India
@@ -76,7 +79,7 @@ function App() {
           <li><a href="#collaborate" onClick={() => setIsMobileMenuOpen(false)}>Partner</a></li>
         </ul>
       </nav>
-
+      
       {/* Hero Section with background animation class */}
       <header id="home" className="hero-container">
         <div className="hero-background"></div>
@@ -164,9 +167,7 @@ function App() {
           <h2 className="section-title">Schedule Appointment</h2>
           <p className="section-subtitle">Fill in the details below to secure your consultation.</p>
           
-          {bookingStatus && (
-            <div className={`status-alert status-${bookingStatus.type}`}>{bookingStatus.message}</div>
-          )}
+         
           <form onSubmit={handleSubmit} onClickCapture={showUnavailableAlert} 
             onFocusCapture={showUnavailableAlert}
            className="form-grid">
