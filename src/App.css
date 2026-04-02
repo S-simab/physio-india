@@ -780,3 +780,25 @@ section {
     color: #1a252f;
   }
 }
+/* --- FOOTER CONTACT STYLES (FIXED IN SINGLE LINE) --- */
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Ye kisi bhi halat mein line break nahi hone dega */
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.contact-item, .separator {
+  white-space: nowrap; /* Text ko aapas mein fasne se rokega */
+}
+
+/* --- MOBILE PAR SIRF FONT CHOTA KARENGE (LINE SAME RAHEGI) --- */
+@media (max-width: 768px) {
+  .footer-contact {
+    font-size: 0.75rem; /* Text thoda chota hoga taaki mobile screen par ek line me fit aa jaye */
+    gap: 5px; /* Gap thoda kam kiya */
+  }
+}

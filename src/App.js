@@ -245,10 +245,23 @@ function App() {
 
       {/* Footer */}
       <footer className="footer animate-fade-in">
-        <p> <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }}></i> contact@thephysioindia.in |
-        <i className="fa-solid fa-phone" style={{ marginLeft: '15px', marginRight: '8px' }}></i> +91 98765 43210 </p>
-        <p>&copy; 2026 The Physio India. All rights reserved.</p>
-      </footer>
+  {/* Naya structured contact div */}
+  <div className="footer-contact">
+    <span className="contact-item">
+      <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }}></i> 
+      contact@thephysioindia.in
+    </span>
+    
+    <span className="separator"> | </span>
+    
+    <span className="contact-item">
+      <i className="fa-solid fa-phone" style={{ marginRight: '8px' }}></i> 
+      +91 98765 43210
+    </span>
+  </div>
+  
+  <p>&copy; 2026 The Physio India. All rights reserved.</p>
+</footer>
 
       {/* MODAL POPUP (Unchanged) */}
       {selectedTherapy && (
