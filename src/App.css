@@ -121,7 +121,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-                    url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000');
+  url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000');
   background-size: cover;
   background-position: center;
   animation: heroBackgroundShrink 5s ease-out forwards;
@@ -211,7 +211,8 @@ section {
   text-align: center;
   font-size: 2.8rem;
   font-weight: 800;
-  color: #1a252f;
+  
+  color: #0d0e0f;
   margin-bottom: 15px;
 }
 
@@ -464,7 +465,7 @@ section {
 .submit-btn {
   grid-column: span 2;
   background-color: #0056b3;
-  color: white;
+  color: rgb(20, 19, 19);
   padding: 18px;
   font-size: 1.2rem;
   border: none;
@@ -521,10 +522,7 @@ section {
 .collab-section {
   background-color: #1a252f;
   color: white;
-}
-
-.collab-section .section-title {
-  color: #ffffff;
+  
 }
 
 .collab-intro {
@@ -532,7 +530,7 @@ section {
   max-width: 700px;
   margin: 0 auto 60px auto;
   font-size: 1.15rem;
-  color: #bdc3c7;
+  color: #1a1d1f;
 }
 
 .criteria-grid {
@@ -801,4 +799,182 @@ section {
     font-size: 0.75rem; /* Text thoda chota hoga taaki mobile screen par ek line me fit aa jaye */
     gap: 5px; /* Gap thoda kam kiya */
   }
+}
+/* --- IMAGE SLIDER CSS --- */
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.slider-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* इमेज को स्ट्रेच होने से बचाता है */
+  display: block;
+}
+
+/* लेफ्ट और राइट बटन की डिजाइन */
+.slider-arrow {
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  
+
+}
+
+
+.left-arrow {
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+.right-arrow {
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* स्लाइडर के अंदर के बटन्स और डॉट्स के लिए */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.left-arrow { left: 10px; }
+.right-arrow { right: 10px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+  width: 25px;
+  border-radius: 5px;
+}
+/* इमेज को स्मूथ बनाने के लिए */
+.slider-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Fade-in एनीमेशन */
+.animate-fade-in {
+  animation: fadeInSlider 0.8s ease-in-out;
+}
+
+@keyframes fadeInSlider {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* स्लाइडर कंटेनर को थोड़ा राउंड और शैडो दें (प्रोफेशनल लुक के लिए) */
+.slider-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+.fade-animation { animation: fadeIn 0.8s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+
+
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* कार्ड्स को बराबर बांटेगा */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* कार्ड के अंदर का टेक्स्ट लेफ्ट रहेगा */
+}
+
+.criteria-card {
+  background: #f0fdf4; /* हल्का हरा बैकग्राउंड */
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #c6f6d5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: 0.3s;
+}
+
+.criteria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.criteria-card h3 {
+  color: #276749;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.criteria-card ul {
+  list-style: none;
+}
+
+.criteria-card ul li {
+  margin-bottom: 10px;
+  color: #4a5568;
+  position: relative;
+  padding-left: 25px;
+}
+
+.criteria-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #38a169;
+  font-weight: bold;
 }
